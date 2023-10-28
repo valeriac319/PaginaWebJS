@@ -55,8 +55,10 @@
       const contenedor = document.querySelector(".contenedor");
       const products = await obtenerProductos();
 
+
       let productos = "";
-      products.forEach((product) => {
+      console.log(products)
+      products.test.forEach((product) => {
 		localStorage.setItem(`product_${product.id}`, JSON.stringify(product));
         productos += `
           <div class="card" style="width: 18rem;">

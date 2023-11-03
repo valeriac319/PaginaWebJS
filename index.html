@@ -3,41 +3,47 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>Tienda virtual</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <style>
-    /*En este ejemplo, hemos utilizado CSS flexbox para que los cards se muestren horizontalmente en la clase .contenedor. 
-      La propiedad flex-wrap: wrap permite que los cards se envuelvan a la siguiente línea cuando no caben en la pantalla, 
-	  y justify-content: space-between distribuye el espacio horizontalmente entre los elementos.
-      Además, hemos establecido un ancho fijo para cada card utilizando flex-basis para que ocupen aproximadamente un tercio 
-	  del ancho del contenedor, y hemos añadido un margen para separarlos. 
-	  Esto crea una disposición horizontal ordenada de los cards. Ajusta los valores según tus necesidades de diseño.
-    */
-    /* Estilo para la clase "contenedor" */
-    .contenedor {
-      display: flex; /* Muestra los elementos hijos en línea (horizontalmente) */
-      flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea cuando no caben en la pantalla */
-      justify-content: space-between; /* Distribuye el espacio horizontalmente entre los elementos */
-    }
 
-    /* Estilo para los cards */
-    .card {
-      margin: 5px; /* Agrega un margen entre los cards */
-	  border: 1px solid #c1c2ca;
-	  padding: 16px;
-	  border-radius: 20px;
-    }
-	
   </style>
 </head>
-<h1>Tienda virtual</h1>
-<body>
-  <div class="encabezado">
-	  <a href="carritodecompra.html">
-	  	<svg id="Layer_1" viewBox="0 0 512 512" width="50px" style="margin-top: 15px; width: 40px;" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"><g fill-rule="evenodd"><path d="m503.429 255.337v-155.63a14.012 14.012 0 0 0 -14.04-14h-336.589l-4.695-30.7c-2.033-13.3-7.669-26.543-16.937-36.422a51.639 51.639 0 0 0 -37.98-16.585h-70.625a14 14 0 0 0 0 28h70.625c16.241 0 25.077 14.9 27.265 29.241l39.5 258.906-1.166.686a59.8 59.8 0 0 0 30.413 111.318h13.838l-2.315 3.177a48.318 48.318 0 0 0 39.142 76.672 48.413 48.413 0 0 0 48.335-48.354 47.909 47.909 0 0 0 -9.194-28.318l-2.315-3.177h97.109l-2.292 3.171a48.354 48.354 0 1 0 78.149-.271l-1.888-2.571 3.136-.579a13.994 13.994 0 0 0 -2.561-27.752h-259.144a31.811 31.811 0 0 1 -7.807-62.65l.243-.062h237.7a84.209 84.209 0 0 0 84.093-84.1z" fill="#e7f2ff"/><path d="m473.4 255.337a54.14 54.14 0 0 1 -54.066 54.1h-230.374l-29.533-193.728h313.973zm-62.7 224.663a18.355 18.355 0 1 1 18.352-18.352 18.355 18.355 0 0 1 -18.352 18.352zm-170.832 0a18.355 18.355 0 1 1 18.353-18.352 18.385 18.385 0 0 1 -18.356 18.352zm265.562-224.663v-155.63a16.012 16.012 0 0 0 -16.041-16h-334.868l-4.435-29c-2.17-14.512-8.4-27.83-17.456-37.487a53.639 53.639 0 0 0 -39.441-17.22h-70.625a16 16 0 0 0 0 32h70.625c15.569 0 23.353 14.833 25.288 27.542l39.3 257.568a61.8 61.8 0 0 0 31.423 115.041h9.9a50.316 50.316 0 0 0 40.765 79.849 50.414 50.414 0 0 0 50.335-50.354 49.893 49.893 0 0 0 -9.577-29.5h89.261a50.353 50.353 0 1 0 81.381-.284 15.993 15.993 0 0 0 -2.925-31.717h-259.14a29.811 29.811 0 0 1 -7.312-58.713h237.442a86.21 86.21 0 0 0 86.1-86.095z" fill="#2e58ff"/></g></svg>
-          </a>
-  </div> 
 
+
+<body>
+
+  <header>
+  <h1>
+    <div class="titulo-encabezado">
+      <p>Tienda virtual</p>
+  
+    </div>
+   
+  </h1>
+
+  
+    <div class="Encabezado"> 
+
+      <div class="contenido-central">  
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#">Nueva colección</a></li>
+          <li><a href="#">Sale</a></li>
+        </ul>
+      </nav>
+      </div>  
+
+      <div class="icono-carrito">
+        <a href="carritodecompra.html"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  
   <div class="contenedor"></div>
 
   <script>
@@ -66,10 +72,10 @@
       products.test.forEach((product) => {
 		localStorage.setItem(`product_${product.id}`, JSON.stringify(product));
         productos += `
-          <div class="card" style="width: 18rem;">
-            <img src="${product.image}" style="width: 100px" class="card-img-top" alt="...">
+          <div class="card" style="width: 15rem; text-align: center">
+            <img src="${product.image}" style="width: 10em" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-text">${product.title}</h5>
+              <h4 class="card-text">${product.title}</h5>
               <p class="card-text">${product.price}</p>
               <a href="detalleproducto.html?id=${product.id}" class="btn btn-primary">Ver Detalle</a>
             </div>

@@ -1,48 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+    /*En este ejemplo, hemos utilizado CSS flexbox para que los cards se muestren horizontalmente en la clase .contenedor. 
+      La propiedad flex-wrap: wrap permite que los cards se envuelvan a la siguiente línea cuando no caben en la pantalla, 
+	  y justify-content: space-between distribuye el espacio horizontalmente entre los elementos.
+      Además, hemos establecido un ancho fijo para cada card utilizando flex-basis para que ocupen aproximadamente un tercio 
+	  del ancho del contenedor, y hemos añadido un margen para separarlos. 
+	  Esto crea una disposición horizontal ordenada de los cards. Ajusta los valores según tus necesidades de diseño.
+    
+   
+    /* Estilo para la clase "contenedor" */
 
-* {
+	
+
+.contenedor {
+  display: flex; /* Muestra los elementos hijos en línea (horizontalmente) */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea cuando no caben en la pantalla */
+  justify-content: space-between; /* Distribuye el espacio horizontalmente entre los elementos */
+}
+
+/* Estilo para los cards */
+.card {
+margin: 2px; /* Agrega un margen entre los cards */
+border: 1px solid #c1c2ca;
+padding: 2em;
+border-radius: 20px;
+}  
+
+.card img:hover{
+  transform: scale(1.2);
+}
+
+.titulo-encabezado{
+  position: relative;
+  background-color: #3d3341; 
+  flex-grow: 1;
+  margin: 1px;
+  color: #fff; 
+  text-align: center; 
+  padding: 0.1em; 
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Comic Neue', cursive;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.5em;
+
 }
 
-html {
-  height: 100%;
-  width: 100%;
-  background-color: #222;
-  color: #050000;
-}
-
-a {
-  color: #fff;
-  text-decoration: none;
-}
-
-main {
-  margin-top: 70px;
-}
-
-nav {
-  position: fixed;
-  top: 0;
-  height: 70px;
-  width: 100%;
-  background: rgba(10, 10, 10, .8);
+.Encabezado {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between; /* Coloca los elementos en los extremos */
+  align-items: center; /* Centra verticalmente los elementos */
+  background-color: #fff; /* Color de fondo */
+  padding: 10px; /* Espaciado */
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.nav-links{
-  width: 80%;
+/* Estilos para la barra de navegación */
+.contenido-central {
+  flex-grow: 1; /* La barra de navegación ocupa todo el espacio disponible */
+}
+
+.contenido-central nav ul {
   list-style: none;
+  padding: 0;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: flex-start /* Coloca los elementos al final */
+
 }
 
-#Layer_1 {
-  color: #fff;
-  background: rgba(10, 10, 10, .8);
+.contenido-central nav li {
+  margin: 0 10px; /* Espaciado entre elementos de la barra de navegación */
+}
+
+/* Estilos para el icono del carrito */
+.icono-carrito {
+  margin-right: 10px; /* Espaciado a la derecha del icono */
 }

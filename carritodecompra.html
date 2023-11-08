@@ -2,11 +2,45 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Tienda virtual</title>
+  <link href="styleCarrito.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+  <header style="margin-top: -21px">
+    
+    <h1>
+      <div class="titulo-encabezado">
+        <p>Tienda virtual</p>
+    
+      </div>
+     
+    </h1>
+  
+    <div class="Encabezado"> 
 
-  <h1>Carrito de Compras</h1>
+      <div class="contenido-central">  
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#">Nueva colección</a></li>
+          <li><a href="#">Sale</a></li>
+        </ul>
+      </nav>
+      </div>  
+
+      <div class="icono-carrito">
+      
+      </div>
+
+    </div>
+  <h2>Carrito de Compras</h2>
   <ul id="carritoLista"></ul>
+
+  <p>
+    <button id="vaciar-carrito">Vaciar Carrito</button>
+  </p>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -28,6 +62,26 @@
         carritoLista.innerHTML = "<p>El carrito está vacío.</p>";
       }
     });
+
+    // Agrega un manejador de eventos al botón "Vaciar Carrito"
+    const vaciarCarritoButton = document.getElementById("vaciar-carrito");
+    vaciarCarritoButton.addEventListener("click", () => {
+      // Llama a una función para vaciar el carrito
+      vaciarCarrito();
+    });
+
+    // Función para vaciar el carrito
+    function vaciarCarrito() {
+      // Elimina los ítems del carrito desde el localStorage
+      localStorage.removeItem("carrito");
+
+      // Limpia la lista en la página
+      const carritoLista = document.getElementById("carritoLista");
+      carritoLista.innerHTML = "<p>El carrito está vacío.</p>";
+    }
   </script>
+
+
+
 </body>
 </html>

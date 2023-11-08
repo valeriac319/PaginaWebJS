@@ -8,12 +8,18 @@
    
     /* Estilo para la clase "contenedor" */
 
-	
+html, body {   
+  margin: 0;   
+  padding: 0;   
+  width: 100%;   
+  height: 100%;   
+  overflow: hidden; /* Opcional: para evitar barras de desplazamiento */}
 
 .contenedor {
   display: flex; /* Muestra los elementos hijos en línea (horizontalmente) */
   flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea cuando no caben en la pantalla */
   justify-content: space-between; /* Distribuye el espacio horizontalmente entre los elementos */
+  padding: 25px;
 }
 
 /* Estilo para los cards */

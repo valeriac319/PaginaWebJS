@@ -5,6 +5,12 @@ html, body {
     height: 100%;   
     overflow: hidden; /* Opcional: para evitar barras de desplazamiento */}
 
+h2 {
+    margin: 10px;   
+    padding: 10px; 
+    font-family: Arial, Helvetica, sans-serif;  
+}
+
 .titulo-encabezado{
     position: relative;
     background-color: #3d3341; 
@@ -43,3 +49,6 @@ html, body {
   .contenido-central nav li {
     margin: 0 10px; /* Espaciado entre elementos de la barra de navegación */
   }
+
+ 
+

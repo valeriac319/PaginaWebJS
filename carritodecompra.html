@@ -38,30 +38,50 @@
   <h2>Carrito de Compras</h2>
   <ul id="carritoLista"></ul>
 
-  <p>
+  <p id="seccion-boton">
     <button id="vaciar-carrito">Vaciar Carrito</button>
   </p>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       // Obtén el carrito desde localStorage
-      const carrito = JSON.parse(localStorage.getItem("carrito"));
+      const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
       // Obtén el elemento de la lista del carrito
       const carritoLista = document.getElementById("carritoLista");
 
-      if (carrito && carrito.length > 0) {
-        // Recorre los productos en el carrito y muestra cada uno en la lista
-        carrito.forEach((product) => {
-          const listItem = document.createElement("li");
-          listItem.textContent = product.title;
-          carritoLista.appendChild(listItem);
-        });
-      } else {
-        // Si el carrito está vacío, muestra un mensaje
-        carritoLista.innerHTML = "<p>El carrito está vacío.</p>";
-      }
-    });
+      function mostrarCarrito() {
+    carritoLista.innerHTML = "";
+    if (carrito && carrito.length > 0) {
+      carrito.forEach((product) => {
+        const listItem = document.createElement("li");
+
+        // Crear elementos para la imagen y el nombre del producto
+        const productImage = document.createElement("img");
+        productImage.src = product.image;
+        productImage.alt = product.title;
+        productImage.style.width = "100px";  // Ajusta el tamaño según sea necesario
+
+        const productName = document.createElement("span");
+        productName.textContent = product.title;
+
+
+
+        // Agregar elementos al listItem
+        listItem.appendChild(productImage);
+        listItem.appendChild(productName);
+
+
+
+        // Agregar listItem a la lista del carrito
+        carritoLista.appendChild(listItem);
+      });
+    } else {
+      carritoLista.innerHTML = "<p>El carrito está vacío.</p>";
+    }
+  }
+
+  mostrarCarrito();
 
     // Agrega un manejador de eventos al botón "Vaciar Carrito"
     const vaciarCarritoButton = document.getElementById("vaciar-carrito");
@@ -79,6 +99,8 @@
       const carritoLista = document.getElementById("carritoLista");
       carritoLista.innerHTML = "<p>El carrito está vacío.</p>";
     }
+  })
+
   </script>
 
 

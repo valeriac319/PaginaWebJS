@@ -22,6 +22,8 @@ html, body {
   padding: 25px;
 }
 
+
+
 /* Estilo para los cards */
 .card {
 margin: 2px; /* Agrega un margen entre los cards */
@@ -31,13 +33,18 @@ border-radius: 20px;
 font-family: Arial, Helvetica, sans-serif;
 }  
 
+.card a{
+  color: #0E0325;
+  text-decoration: none;
+}
+
 .card img:hover{
   transform: scale(1.2);
 }
 
 .titulo-encabezado{
   position: relative;
-  background-color: #3d3341; 
+  background-color: #0E0325; 
   flex-grow: 1;
   margin: 1px;
   color: #fff; 
@@ -55,12 +62,20 @@ font-family: Arial, Helvetica, sans-serif;
   align-items: center; /* Centra verticalmente los elementos */
   background-color: #fff; /* Color de fondo */
   padding: 10px; /* Espaciado */
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: larger;
+  font-weight: bold;
+
 }
 
 /* Estilos para la barra de navegación */
 .contenido-central {
   flex-grow: 1; /* La barra de navegación ocupa todo el espacio disponible */
+}
+
+.contenido-central nav a {
+  text-decoration: none; /* Elimina el subrayado del texto */
+  color:#0E0325;
 }
 
 .contenido-central nav ul {
@@ -72,10 +87,17 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 .contenido-central nav li {
-  margin: 0 10px; /* Espaciado entre elementos de la barra de navegación */
+  margin: 0 25px; /* Espaciado entre elementos de la barra de navegación */
 }
 
 /* Estilos para el icono del carrito */
 .icono-carrito {
   margin-right: 10px; /* Espaciado a la derecha del icono */
+  color: #0E0325;
+    
+}
+
+.icono-carrito a{
+  color: #0E0325;
+  text-decoration: none;
 }

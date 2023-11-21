@@ -29,7 +29,10 @@ h2 {
     align-items: center; /* Centra verticalmente los elementos */
     background-color: #fff; /* Color de fondo */
     padding: 10px; /* Espaciado */
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+    font-weight: bold;
+
     }
 
  /* Estilos para la barra de navegación */
@@ -37,12 +40,17 @@ h2 {
     flex-grow: 1; /* La barra de navegación ocupa todo el espacio disponible */
   }
   
-  .contenido-central nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: flex-start /* Coloca los elementos al final */
-  
+.contenido-central nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start /* Coloca los elementos al final */
+
+}
+
+  .contenido-central nav a {
+    text-decoration: none; /* Elimina el subrayado del texto */
+    color:#0E0325;
   }
   
   .contenido-central nav li {

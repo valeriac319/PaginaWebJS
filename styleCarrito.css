@@ -58,6 +58,7 @@ h2 {
 
   }
 
+
 /* Estilos para la lista del carrito */
 #carritoLista {
   padding: 0; /* Elimina el relleno predeterminado de la lista */
@@ -65,7 +66,7 @@ h2 {
 
 /* Estilos para los elementos de la lista del carrito */
 #carritoLista li {
-  list-style: none;
+  list-style-type: style;
   width: 90%;
   border: 1px solid #c1c2ca; /* Fondo gris */
   margin: 20px; /* Margen alrededor de cada elemento */
@@ -74,11 +75,22 @@ h2 {
   overflow: hidden; /* Para asegurar que el borde redondeado se aplique correctamente */
   font-family: Arial, Helvetica, sans-serif;
   font-size: larger;
+  display: flex; /* Mostrar los elementos en línea */
+  align-items: flex-start; /* Alinear los elementos al principio */
 }
 
 /* Estilos para la imagen dentro de los elementos de la lista del carrito */
 #carritoLista li img {
   margin-right: 10px; /* Margen a la derecha de la imagen */
 }
- 
+
+/* Estilos para el contenido de los elementos de la lista del carrito */
+#carritoLista li div {
+  flex-grow: 1; /* Que el contenido ocupe el espacio disponible */
+}
+
+/* Estilos para los botones de incremento y decremento */
+#carritoLista li button {
+  margin-top: 10px; /* Espaciado arriba de los botones */
+}
 
